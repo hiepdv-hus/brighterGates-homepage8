@@ -99,6 +99,22 @@
 }
 
 /* === service === */
+.service .site-heading h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 800;
+    color: #082644;
+    line-height: 120%;
+    font-size: 72px;
+    margin-bottom: 15px;
+}
+
+.service .site-heading p {
+    color: #3C546C;
+    font-weight: 400;
+font-size: 24px;
+line-height: 32px;
+    text-align: left;
+}
 .background-service{
     background: linear-gradient(180deg, rgba(156, 255, 234, 0.4) 0%, rgba(234, 255, 248, 0) 108.52%);
     border-radius: 12px;
@@ -116,5 +132,16 @@
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: #082644;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 165%;
+}
+.service .swiper {
+    background: linear-gradient(#ffffff71, #fff);
+}
+.service .swiper-slide {
+    height: 480px;
+    margin-left: 10px;
+}
+.service .swiper-slide .shadow-min2{
+    height: 100%;
 }
