@@ -61,7 +61,7 @@ p {
   padding: 18px 40px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   background: #2A66DB;
   border-top-right-radius: 4px;
@@ -84,7 +84,7 @@ p {
   padding: 5px 20px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   background: transparent;
   border-radius: 4px;
@@ -101,7 +101,7 @@ p {
   padding: 8px 30px;
   text-transform: capitalize;
   color: var(--bs-primary);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   border-radius: 4px;
   transition: .3s;
@@ -120,7 +120,7 @@ p {
   padding: 10px 40px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   border-radius: 1000px;
   transition: .3s;
@@ -132,7 +132,7 @@ p {
   padding: 10px 40px;
   text-transform: capitalize;
   color: var(--bs-primary);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   border-radius: 1000px;
   transition: .3s;
@@ -148,7 +148,7 @@ p {
   padding: 5px 20px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   background: var(--bs-primary);
   border-radius: 4px;
@@ -165,7 +165,7 @@ header .signIn-btn {
   padding-bottom: 0;
   text-transform: capitalize;
   color: var(--bs-primary) !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   background: transparent;
 }
@@ -174,7 +174,7 @@ header .signUp-btn {
   padding: 4px 20px;
   text-transform: capitalize;
   color: var(--bs-primary) !important;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 600;
   border-radius: 8px;
   border: 1px solid var(--bs-primary);
@@ -193,7 +193,7 @@ header .jobguru-btn:hover {
   padding: 10px 30px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   background: #c92813 none repeat scroll 0 0;
   border-radius: 4px;
@@ -208,7 +208,7 @@ header .jobguru-btn:hover {
   padding: 10px 30px;
   text-transform: capitalize;
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 500;
   background: var(--bs-primary) none repeat scroll 0 0;
   border-radius: 4px;
@@ -622,9 +622,8 @@ select {
 06 - BTN TOP CSS
 ==================================================*/
 .btntoTop {
-  color: #ffffff;
+  color: var(--bs-primary);
   vertical-align: middle;
-  background-color: var(--bs-primary);
   border: 1px solid var(--bs-primary);
   border-radius: 50%;
   bottom: 30px;
@@ -651,7 +650,8 @@ select {
 }
 
 .btntoTop.active:hover {
-  background: #3454f1d5 none repeat scroll 0 0;
+  background: var(--bs-primary) none repeat scroll 0 0;
+  color: #fff;
   border: 1px solid #fff;
   opacity: 0.8;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
@@ -830,7 +830,7 @@ header ul li.active a.has-children-link {
     padding: 8px 25px;
     text-transform: capitalize;
     color: #fff;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 500;
     background: transparent;
     border-radius: 4px;
@@ -1254,7 +1254,7 @@ i.fa-heart {
 }
 
 .job-category-name {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   max-width: 215px !important;
   color: #000;
   line-height: 1.5;
@@ -1264,7 +1264,7 @@ i.fa-heart {
   margin-top: 30px;
 }
 .job-company-name {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   max-width: 215px !important;
   color: #fff;
   line-height: 1.5;
@@ -1440,6 +1440,53 @@ a.read-more:hover {
 13 - VIDEO AREA CSS
 ==================================================*/
 
+.services-relative {
+  position: relative;
+}
+.menu-services {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 300px;
+  border-radius: 8px;
+  background-color: #ecfff5;
+  box-shadow: 0px 30px 51px rgba(16, 122, 9, 0.08), 0px 4px 6.38599px rgba(16, 122, 9, 0.04);
+}
+.menu-services li {
+  width: 100%;
+  padding: 0;
+  text-align: left;
+}
+.menu-services li a{
+  display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    clear: both;
+    font-weight: 600;
+    color: #000;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+}
+.menu-services li:first-child a{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.menu-services li:last-child a{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.menu-services li a:hover{
+  background-color: #0EB95E !important;
+  color: #fff !important;
+}
+.services-relative:hover ul.menu-services{
+  display: block;
+}
 /* .jobguru-video-area {
   background: #e8effd;
   background-size: cover;
@@ -1686,7 +1733,7 @@ span.text-gray {
 }
 
 .latest-post-footer-right > h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 600;
   line-height: 20px;
@@ -1902,6 +1949,35 @@ span.text-gray {
 
 #subs_img {
   height: 390px;
+}
+
+.pagination {
+  margin-top: 48px;
+  text-align: center;
+  float: none;
+  display: inline-block;
+}
+.pagination li {
+  display: inline-block;
+  margin-right: 5px;
+  text-align: center;
+}
+.pagination li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 16px;
+  line-height: 35px;
+  border-radius: 50%;
+  font-weight: 500;
+}
+.pagination li a {
+  border: 1px solid #D3DAE1;
+  border-radius: 6px;
+  background: transparent;
+  color: #8094A8;
 }
 /*================================================
 Responsive
