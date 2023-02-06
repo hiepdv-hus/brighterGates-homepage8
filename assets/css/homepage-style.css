@@ -29,6 +29,7 @@ body {
   overflow-wrap: break-word;
   word-break: normal;
   transition: 0.5s;
+  background-color: #F9FAFB;
 }
 .stop-scrolling {
   height: 100%;
@@ -135,13 +136,12 @@ p {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   border-radius: 1000px;
-  transition: .3s;
   border: 1px solid var(--bs-primary);
 }
 .jobguru-btn:hover, .jobguru-btn-left:hover {
   background-color: var(--bs-primary);
   color: #fff;
-  box-shadow: 0px 0px 30px rgb(0 0 0 / 30%);
+  /* box-shadow: 0px 0px 30px rgb(0 0 0 / 30%); */
 }
 .jobguru-post {
   display: inline-block;
@@ -378,8 +378,85 @@ li {
 }
 .brighter-text-bottom {
   align-items: flex-end;
+  padding-bottom: 15px;
+}
+/* ==== */
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel::before {
+  background: linear-gradient(to right, rgba(245,250,249,1) 0%, rgba(249,255,251,0) 100%);
+  position: absolute;
+  content: "";
+  width: 15%;
+  height: 100%;
+  z-index: 10;
+}
+.feature-customers {
+  margin-bottom: 40px;
+}
+.feature-customers .swiper::before {
+  background: linear-gradient(to right, rgba(245,250,249,1) 0%, rgba(249,255,251,0) 100%);
+  position: absolute;
+  content: "";
+  width: 10%;
+  height: 100%;
+  z-index: 10;
+}
+.carousel::before, .feature-customers .swiper::before {
+  top: 0;
+  left: 0;
+}
+.carousel__slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 105px;
+}
+
+.carousel__list {
+  position: absolute;
+  width: 150%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  animation: slide 10s ease-in-out infinite;
+}
+
+.carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100px;
+  box-sizing: border-box;
+  cursor: pointer;
+  animation: slide 10s ease-in-out infinite;
+}
+/* ==== */
+.swiper-slide {
+  cursor: pointer;
+}
+.swiper-slide .swipper-img-1 {
+  display: none;
 }
 .swiper-slide img {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+}
+.swiper-slide .customers-link:hover .swipper-img-0{
+  display: none;
+}
+.swiper-slide .customers-link:hover .swipper-img-1{
+  display: block;
+}
+/* .swiper-slide img {
   width: 100%;
   height: 50px;
   padding: 0 10px;
@@ -395,11 +472,11 @@ li {
   -moz-filter: grayscale(0%);
   -ms-filter: grayscale(0%);
   -o-filter: grayscale(0%);
-}
-.swiper-pagination {
+} */
+/* .swiper-pagination {
   position: relative;
   margin-top: 2.5rem;
-}
+} */
 .swiper-pagination-bullet-active {
   background-color: var(--bs-primary) !important;
 }
@@ -719,9 +796,9 @@ header,
   z-index: 99999;
 }
 
-.site-logo img {
+/* .site-logo img {
   width: 9rem;
-}
+} */
 
 .jobguru-header-area.stick-top.sticky .non-stick-logo {
   display: none;
@@ -746,12 +823,14 @@ header ul li a.has-children-link::after {
   width: 0;
   background: var(--bs-primary);
   position: absolute;
-  left: 0;
-  bottom: -5px;
-  transition: 0.5s;
+  left: 25%;
+  bottom: -2px;
+  /* transition: 0.5s; */
+  border-radius: 1000px;
+  margin: auto;
 }
 header ul li:hover a.has-children-link::after {
-  width: 100%;
+  width: 50%;
 }
 header ul li:hover a.has-children-link {
   color: var(--bs-primary) !important;
@@ -762,7 +841,6 @@ header ul li a {
   font-weight: 600;
   position: relative;
   color: #000;
-  transition: 0.2s;
   text-transform: uppercase;
 }
 .header-right-menu ul li{
@@ -820,7 +898,7 @@ header ul li a {
 }
 
 header ul li.active a.has-children-link::after {
-  width: 100%;
+  width: 50%;
 }
 header ul li.active a.has-children-link {
   color: var(--bs-primary) !important;
@@ -1048,9 +1126,14 @@ header ul li.active a.has-children-link {
 ==================================================*/
 .text-border {
   color: #fff;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  font-size: 90px;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+  font-size: 128px;
   font-weight: 700;
+  -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #000;
+    color: #000;
+    line-height: 200px;
 }
 .textPrimary {
   color: var(--bs-primary);
@@ -1280,7 +1363,7 @@ i.fa-heart {
 }
 .shadow-min2 {
   width: 100%;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.05); */
   /* transition: all 0.4s ease 0s; */
 }
 
@@ -1446,7 +1529,7 @@ a.read-more:hover {
 .menu-services {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 35px;
   left: 0;
   width: 300px;
   border-radius: 8px;
@@ -1524,8 +1607,8 @@ a.read-more:hover {
   position: absolute;
   bottom: 0;
   width: 100%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 .blog-content {
   padding-top: 10px !important;
@@ -1603,7 +1686,10 @@ a.read-more:hover {
   width: 100%;
   top: 0;
 }
-
+.card-img, .card-img-top {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
 .news-text-absolute {
   position: absolute;
   top: 5px;
@@ -1624,9 +1710,14 @@ a.read-more:hover {
 .single-blog {
   transition: all 0.2s ease 0s;
   width: 100%;
+  border-radius: 12px;
 }
 .featuredJob .card {
-    border-radius: 4px;
+    border-radius: 12px;
+    border: 0.5px solid #fff;
+}
+.featuredJob .card:hover {
+  border: 0.5px solid var(--bs-primary);
 }
 .single-blog:hover {
   /* -webkit-transform: translateY(-4px);
@@ -1669,6 +1760,7 @@ a.read-more:hover {
   color: #8d8e92;
   position: relative;
   z-index: 1;
+  margin-top: 40px;
 }
 .footer-logo img {
   margin-bottom: 15px;
@@ -1985,7 +2077,7 @@ Responsive
 
 @media screen and (min-width: 1400px) {
   .container {
-    max-width: 1320px;
+    max-width: 1420px;
   }
 }
 
@@ -2006,6 +2098,24 @@ Responsive
 @media screen and (max-width: 992px) {
   .banner-search h4 {
     font-size: 36px;
+}
+.carousel__slider {
+  height: 150px;
+}
+.text-border {
+  line-height: 125px;
+}
+.textPrimary {
+  text-align: center;
+}
+header ul li a.has-children-link::after {
+  left: 0;
+}
+header ul li.active a.has-children-link::after {
+  width: 100%;
+}
+header ul li:hover a.has-children-link::after {
+  width: 100%;
 }
 .totalJob {
   text-align: center;
@@ -2176,8 +2286,14 @@ Responsive
 }
 
 @media (max-width: 767px) {
+  .section_50 {
+    padding: 25px 0;
+  }
   .totalJob .text-border {
     font-size: 40px;
+  }
+  .carousel__list {
+    width: 300%;
   }
   .textPrimary {
     color: var(--bs-primary);

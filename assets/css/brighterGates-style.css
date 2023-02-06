@@ -136,16 +136,38 @@ line-height: 32px;
     line-height: 165%;
 }
 .service .swiper {
-    background: linear-gradient(#ffffff71, #fff);
+    padding: 0 20px;
 }
 .service .swiper-slide {
-    height: 480px;
-    margin-left: 10px;
+    height: auto;
 }
 .service .swiper-slide .shadow-min2{
     height: 100%;
 }
-
+.service .feature-job-body .job-item__content {
+    padding-bottom: 0;
+}
+.service .swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev {
+    width: 35px !important;
+    height: 35px !important;
+    background-color: #26BC51;
+    border-radius: 50%;
+}
+.swiper-button-next, .swiper-button-prev {
+    top: 45% !important;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 0;
+    left: auto;
+}
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 0;
+    right: auto;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after, .swiper-button-prev:after, .swiper-rtl .swiper-button-prev:after {
+    color: #fff;
+    font-size: 16px !important;
+}
 /* === Brands === */
 .feature-brand-body .card-body{
  padding: 32px;
