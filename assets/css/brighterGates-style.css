@@ -230,7 +230,6 @@ margin-right: 12px;
 .brand-link a:hover, .brand-search .brand-search__button:hover {
     background-color: #0EB95E;
     color: #fff;
-    box-shadow: 0px 0px 30px rgb(0 0 0 / 30%);
 }
 .brand-search {
     display: flex;
@@ -261,4 +260,23 @@ padding: 13px 27px;
     border-radius: 1000px;
     transition: .3s;
     border: 1px solid #35B456;
+}
+@media screen and (max-width: 991px) {
+    .brand-link {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .brand-link a {
+        width: 33.33%;
+        margin-right: 0;
+    }
+    .brand-search-width {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .brand-link a {
+        width: 50%;
+        margin-right: 0;
+    }
 }

@@ -412,7 +412,7 @@ li {
   position: relative;
   display: flex;
   align-items: center;
-  width: 100vw;
+  width: 1300px;
   height: 105px;
 }
 
@@ -1708,9 +1708,9 @@ a.read-more:hover {
 }
 
 .single-blog {
-  transition: all 0.2s ease 0s;
   width: 100%;
   border-radius: 12px;
+  border: .5px solid #fff;
 }
 .featuredJob .card {
     border-radius: 12px;
@@ -1722,6 +1722,7 @@ a.read-more:hover {
 .single-blog:hover {
   /* -webkit-transform: translateY(-4px);
   transform: translateY(-4px); */
+  border: .5px solid #0EB95E;
   box-shadow: 0px 55px 36px rgba(24, 208, 65, 0.09), 0px 23.4471px 17.4297px rgba(24, 208, 65, 0.0403602), 0px 6.21926px 5.93794px rgba(24, 208, 65, 0.0142158);
 }
 
@@ -2101,6 +2102,7 @@ Responsive
 }
 .carousel__slider {
   height: 150px;
+  width: 1000px;
 }
 .text-border {
   line-height: 125px;
@@ -2289,11 +2291,9 @@ header ul li:hover a.has-children-link::after {
   .section_50 {
     padding: 25px 0;
   }
+  
   .totalJob .text-border {
     font-size: 40px;
-  }
-  .carousel__list {
-    width: 300%;
   }
   .textPrimary {
     color: var(--bs-primary);
@@ -2367,6 +2367,12 @@ header .signIn-btn {
   }
   .banner-text {
     top: 25%;
+  }
+  .banner-text .ps-4 {
+    padding-left: calc(-0.5 * var(--bs-gutter-x)) !important;
+  }
+  .banner-text .pe-4 {
+    padding-right: calc(-0.5 * var(--bs-gutter-x)) !important;
   }
   .single-footer-widget {
     margin: 30px 0;
