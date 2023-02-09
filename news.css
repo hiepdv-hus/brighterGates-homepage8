@@ -54,8 +54,8 @@ a {
 }
 
 a {
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
+    /* -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s; */
     color: var(--bs-primary)
 }
 
@@ -415,12 +415,11 @@ img {
 }
 
 .forsticky {
-    background: #fff;
+    background: transparent;
     position: absolute;
     left: 0;
     top: 0;
 }
-
 .stick-top {
     position: absolute;
     left: 0;
@@ -482,16 +481,17 @@ header ul {
 
 header ul li {
     display: inline-block;
-    position: relative
+    position: relative;
+    padding: 5px 10px;
 }
 
 header ul li a {
     display: block;
-    padding: 5px 10px;
     text-transform: capitalize;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
+    color: #000;
+    text-transform: uppercase;
 }
 
 header ul li:hover>ul {
@@ -609,7 +609,7 @@ header ul li:hover ul li:hover ul {
     font-weight: 500
 }
 
-header ul li a:hover {
+header ul li:hover>a {
     color: var(--bs-primary) !important;
 }
 
