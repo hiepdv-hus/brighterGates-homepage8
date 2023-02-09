@@ -69,6 +69,7 @@ This files contents are outlined below >>>>
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,900');
+
 .text-responsive {
     font-size: calc(100% + 1vw + 1vh);
 }
@@ -78,7 +79,7 @@ This files contents are outlined below >>>>
     --bs-background: #081842 !important;
     --bs-violet: #791cc6 !important;
     --bs-black: #030615 !important;
-  }
+}
 
 
 /*================================================
@@ -98,7 +99,7 @@ body {
     word-break: normal;
     transition: 0.5s;
     background-color: #F9FAFB;
-  }
+}
 
 html,
 body {
@@ -676,23 +677,6 @@ header ul li a {
     position: relative;
 }
 
-header ul li ul {
-    position: absolute;
-    width: 200px;
-    top: 140%;
-    left: 0;
-    background: #fff none repeat scroll 0 0;
-    box-shadow: 0 0px 8px rgba(16, 16, 16, 0.25);
-    border-radius: 5px;
-    visibility: hidden;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    padding: 10px 0;
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    z-index: 99
-}
-
 header ul li:hover>ul {
     visibility: visible;
     opacity: 1;
@@ -798,6 +782,88 @@ header ul li:hover ul li:hover ul {
 
 .header-right-menu ul li {
     display: inline-block
+}
+
+header ul li a:hover {
+    color: var(--bs-primary) !important;
+}
+
+header ul li a.has-children-link::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: var(--bs-primary);
+    position: absolute;
+    left: 25%;
+    bottom: -2px;
+    /* transition: 0.5s; */
+    border-radius: 1000px;
+    margin: auto;
+}
+
+header ul li:hover a.has-children-link::after {
+    width: 50%;
+}
+header ul li.active a {
+    color: var(--bs-primary) !important;
+}
+header ul li.active a.has-children-link::after {
+    width: 50%;
+}
+
+.services-relative {
+    position: relative;
+}
+
+.menu-services {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 300px;
+    border-radius: 8px;
+    background-color: #ecfff5;
+    box-shadow: 0px 30px 51px rgba(16, 122, 9, 0.08), 0px 4px 6.38599px rgba(16, 122, 9, 0.04);
+}
+
+.menu-services li {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+}
+
+.menu-services li a {
+    display: block;
+    width: 100%;
+    padding: .5rem 1rem;
+    clear: both;
+    font-weight: 600;
+    color: #000;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.menu-services li:first-child a {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.menu-services li:last-child a {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.menu-services li a:hover {
+    background-color: #0EB95E !important;
+    color: #fff !important;
+}
+
+.services-relative:hover ul.menu-services {
+    display: block;
 }
 
 .header-right-menu ul li a {
@@ -942,7 +1008,7 @@ header .jobguru-btn:hover {
     transition: all 0.4s ease 0s;
     padding: 10px 40px !important;
     background: var(--bs-primary) none repeat scroll 0 0;
-    border-radius: 50rem!important;
+    border-radius: 50rem !important;
     border: solid 1px #1e8d4e;
     color: #fff;
 }
@@ -953,7 +1019,7 @@ header .jobguru-btn:hover {
     -webkit-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
     padding: 10px 40px !important;
-    border-radius: 50rem!important;
+    border-radius: 50rem !important;
     border: solid 1px #1e8d4e;
     color: #fff;
 }
@@ -1925,26 +1991,32 @@ input.styled:checked~label.styled:before {
 }
 
 @-webkit-keyframes throw {
+
     0%,
     63% {
         margin-left: 0;
     }
+
     64% {
         margin-left: -5px;
     }
+
     100% {
         margin-left: 0;
     }
 }
 
 @keyframes throw {
+
     0%,
     63% {
         margin-left: 0;
     }
+
     64% {
         margin-left: -5px;
     }
+
     100% {
         margin-left: 0;
     }
@@ -2152,6 +2224,7 @@ input.styled:checked~label.styled:before {
     0% {
         height: 0;
     }
+
     100% {
         height: 1.2rem;
     }
@@ -2161,6 +2234,7 @@ input.styled:checked~label.styled:before {
     0% {
         height: 0;
     }
+
     100% {
         height: 1.2rem;
     }
@@ -2171,10 +2245,12 @@ input.styled:checked~label.styled:before {
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     }
+
     75% {
         opacity: 1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     }
+
     100% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
@@ -2186,10 +2262,12 @@ input.styled:checked~label.styled:before {
         opacity: 0;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     }
+
     75% {
         opacity: 1;
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     }
+
     100% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2);
