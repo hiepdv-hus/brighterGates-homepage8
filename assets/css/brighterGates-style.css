@@ -168,6 +168,11 @@ line-height: 32px;
     color: #fff;
     font-size: 16px !important;
 }
+@media screen and (max-width: 767px) {
+    .background-service{
+        padding: 20px 15px;
+    } 
+}
 /* === Brands === */
 .feature-brand-body .card-body{
  padding: 32px;
